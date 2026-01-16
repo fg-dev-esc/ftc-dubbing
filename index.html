@@ -1,96 +1,301 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FTC DUBBING - Servicios de Doblaje Profesional</title>
+  <link rel="icon" type="image/png" href="public/logos/LOGO_BCO_4.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    
+    html { scroll-behavior: smooth; }
+
+</style>
 </head>
-<body class="min-h-screen bg-black text-white selection:bg-[#39ff14] selection:text-black font-['Inter']">
-  <main class="min-h-screen">
-    <div class="container mx-auto px-5">
-      <section class="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">FTC DUBBING.</h1>
-        <h2 class="text-center md:text-left text-lg mt-5 md:pl-8">Tu voz, nuestra pasión: Servicios de doblaje, localización y subtitulaje.</h2>
-      </section>
-      <section>
-        <div class="mb-8 md:mb-16">
-          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1500&h=1000&fit=crop" alt="Estudio de grabación profesional" class="w-full max-h-[50vh] min-h-[300px] object-cover">
+<body class="min-h-screen bg-black text-white font-['Inter'] antialiased selection:bg-white selection:text-black overflow-x-hidden">
+  
+  <!-- navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5">
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="opacity-100 hover:opacity-80 transition-opacity">
+        <img src="public/logos/LOGO_BCO_1.png" alt="FTC DUBBING" class="h-12 md:h-16 w-auto">
+      </a>
+      <nav class="flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#servicios" class="hidden md:block text-white/60 hover:text-white transition-colors duration-300">SERVICIOS</a>
+        <a href="#contacto" class="px-5 py-2 border border-white/20 hover:bg-white hover:text-black transition-all duration-300">CONTACTO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 md:pt-32">
+    
+    <!-- hero -->
+    <div class="container mx-auto px-6">
+      <section class="flex flex-col md:flex-row items-end md:justify-between mb-16 md:mb-24 reveal active">
+        <div class="md:w-2/3">
+          <h1 class="sr-only">FTC DUBBING</h1>
+          <h2 class="text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-tight max-w-3xl text-white/90">
+            Tu voz, nuestra pasión. <br>
+            <span class="text-white/50">Servicios de doblaje, localización y subtitulaje.</span>
+          </h2>
         </div>
-        <div class="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-          <div>
-            <h3 class="mb-4 text-4xl lg:text-6xl leading-tight"><a href="#servicios" class="hover:underline">Bienvenido a nuestro Estudio de Doblaje</a></h3>
-            <div class="mb-4 md:mb-0 text-base opacity-60">Estudio profesional</div>
+        <div class="mt-8 md:mt-0 md:w-1/3 flex justify-start md:justify-end">
+          <div class="h-px w-16 bg-white/30 mr-4 mt-4 hidden md:block"></div>
+          <p class="text-sm text-white/40 font-mono uppercase tracking-widest text-right hidden md:block">
+            Est. 2026<br>Mexico City
+          </p>
+        </div>
+      </section>
+
+      <!-- intro -->
+      <section class="mb-24 md:mb-32">
+        <div class="mb-12 md:mb-20 overflow-hidden rounded-sm group relative reveal">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1600&h=900&fit=crop" 
+               alt="Estudio de grabación profesional" 
+               class="w-full max-h-[60vh] object-cover brightness-90 contrast-110 group-hover:scale-105 transition-transform duration-1000 ease-out">
+        </div>
+
+        <div class="md:grid md:grid-cols-12 gap-8 mb-20 md:mb-28 border-t border-white/10 pt-12 reveal">
+          <div class="md:col-span-5 lg:col-span-4">
+            <h3 class="text-3xl md:text-4xl font-semibold tracking-tighter mb-4">
+              Bienvenido a nuestro <br><span class="text-white/40">Estudio de Doblaje</span>
+            </h3>
+            <div class="flex items-center gap-2 text-white/40 text-sm font-mono mt-2">
+              
+            </div>
           </div>
-          <div>
-            <p class="text-lg leading-relaxed mb-4">En nuestro estudio, transformamos historias y proyectos con voces auténticas y profesionales, para el público latinoamericano. Ofrecemos servicios personalizados que cumplen los más altos estándares de calidad en doblaje.</p>
+          <div class="md:col-span-7 lg:col-span-8 md:pl-8 lg:pl-16">
+            <p class="text-lg md:text-xl lg:text-2xl leading-relaxed font-light text-white/80">
+              Transformamos historias y proyectos con voces auténticas y profesionales para el público latinoamericano. Ofrecemos servicios personalizados que cumplen los más altos estándares de calidad en doblaje, cuidando cada matiz y emoción.
+            </p>
           </div>
         </div>
       </section>
-      <section id="servicios">
-        <h2 class="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">Nuestros Servicios</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
-          <div>
-            <div class="mb-5">
-              <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=700&h=700&fit=crop" alt="Doblaje profesional" class="w-full aspect-video object-cover">
+
+      <!-- servicios -->
+      <section id="servicios" class="mb-32">
+        <div class="flex items-end justify-between mb-16 border-b border-white/10 pb-6 reveal">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tighter">Nuestros Servicios</h2>
+          <span class="text-white/30 font-mono text-sm hidden md:block">01 — 04</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 lg:gap-y-24">
+          
+          <div class="group cursor-default reveal">
+            <div class="mb-6 overflow-hidden rounded-sm relative">
+               <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+              <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop" 
+                   alt="Doblaje profesional" 
+                   class="w-full aspect-[4/3] object-cover brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out">
             </div>
-            <h3 class="text-3xl mb-3 leading-snug"><a href="#doblaje" class="hover:underline">Doblaje Profesional</a></h3>
-            <div class="text-base opacity-60 mb-4">Cine, TV, Videojuegos</div>
-            <p class="text-lg leading-relaxed mb-4">Voces profesionales para dar vida a tus proyectos audiovisuales con la más alta calidad y autenticidad para el mercado latinoamericano.</p>
-          </div>
-          <div>
-            <div class="mb-5">
-              <img src="https://images.unsplash.com/photo-1701491073136-5d533a74f483?w=700&h=700&fit=crop" alt="Traducción y adaptación" class="w-full aspect-video object-cover">
+            <div class="flex justify-between items-start border-b border-white/10 pb-4 mb-4">
+              <h3 class="text-2xl md:text-3xl font-medium tracking-tight group-hover:text-white transition-colors">Doblaje Profesional</h3>
+              <i data-lucide="mic" class="w-6 h-6 text-white/30 group-hover:text-white transition-colors"></i>
             </div>
-            <h3 class="text-3xl mb-3 leading-snug"><a href="#traduccion" class="hover:underline">Traducción y Adaptación</a></h3>
-            <div class="text-base opacity-60 mb-4">Guiones y Localización</div>
-            <p class="text-lg leading-relaxed mb-4">Adaptamos y localizamos tus guiones manteniendo la esencia del mensaje original, con sensibilidad cultural y profesionalismo.</p>
+            <div class="text-sm font-mono text-white/40 mb-3 uppercase tracking-wider">Cine, TV, Videojuegos</div>
+            <p class="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
+              Voces profesionales para dar vida a tus proyectos audiovisuales con la más alta calidad y autenticidad para el mercado latinoamericano.
+            </p>
           </div>
-          <div>
-            <div class="mb-5">
-              <img src="https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=700&h=700&fit=crop" alt="Edición y mezcla de audio" class="w-full aspect-video object-cover">
+
+          <div class="group cursor-default reveal delay-100">
+            <div class="mb-6 overflow-hidden rounded-sm relative">
+               <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+              <img src="https://images.unsplash.com/photo-1701491073136-5d533a74f483?w=800&h=600&fit=crop" 
+                   alt="Traducción y adaptación" 
+                   class="w-full aspect-[4/3] object-cover brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out">
             </div>
-            <h3 class="text-3xl mb-3 leading-snug"><a href="#audio" class="hover:underline">Edición y Mezcla de Audio</a></h3>
-            <div class="text-base opacity-60 mb-4">Audio 2.0 y 5.1</div>
-            <p class="text-lg leading-relaxed mb-4">Edición y mezcla de audio profesional en formatos 2.0 y 5.1, garantizando la máxima calidad sonora para tu proyecto.</p>
-          </div>
-          <div>
-            <div class="mb-5">
-              <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=700&h=700&fit=crop" alt="Por qué elegirnos" class="w-full aspect-video object-cover">
+             <div class="flex justify-between items-start border-b border-white/10 pb-4 mb-4">
+              <h3 class="text-2xl md:text-3xl font-medium tracking-tight group-hover:text-white transition-colors">Traducción y Adaptación</h3>
+              <i data-lucide="languages" class="w-6 h-6 text-white/30 group-hover:text-white transition-colors"></i>
             </div>
-            <h3 class="text-3xl mb-3 leading-snug"><a href="#elegirnos" class="hover:underline">¿Por qué elegirnos?</a></h3>
-            <div class="text-base opacity-60 mb-4">Experiencia y profesionalismo</div>
-            <p class="text-lg leading-relaxed mb-4">Somos un estudio nuevo pero nuestro equipo cuenta con años de experiencia en series de televisión, cine y documentales. Entregas puntuales, atención personalizada y confidencialidad garantizada.</p>
+            <div class="text-sm font-mono text-white/40 mb-3 uppercase tracking-wider">Guiones y Localización</div>
+            <p class="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
+              Adaptamos y localizamos tus guiones manteniendo la esencia del mensaje original, con sensibilidad cultural y profesionalismo.
+            </p>
           </div>
+
+          <div class="group cursor-default reveal">
+            <div class="mb-6 overflow-hidden rounded-sm relative">
+               <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+              <img src="https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=800&h=600&fit=crop" 
+                   alt="Edición y mezcla de audio" 
+                   class="w-full aspect-[4/3] object-cover brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            </div>
+             <div class="flex justify-between items-start border-b border-white/10 pb-4 mb-4">
+              <h3 class="text-2xl md:text-3xl font-medium tracking-tight group-hover:text-white transition-colors">Edición y Mezcla</h3>
+               <i data-lucide="sliders" class="w-6 h-6 text-white/30 group-hover:text-white transition-colors"></i>
+            </div>
+            <div class="text-sm font-mono text-white/40 mb-3 uppercase tracking-wider">Audio 2.0 y 5.1</div>
+            <p class="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
+              Edición y mezcla de audio profesional en formatos 2.0 y 5.1, garantizando la máxima calidad sonora e inmersiva.
+            </p>
+          </div>
+
+          <div class="group cursor-default reveal delay-100">
+            <div class="mb-6 overflow-hidden rounded-sm relative">
+               <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+              <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&h=600&fit=crop" 
+                   alt="Por qué elegirnos" 
+                   class="w-full aspect-[4/3] object-cover brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700 ease-out">
+            </div>
+             <div class="flex justify-between items-start border-b border-white/10 pb-4 mb-4">
+              <h3 class="text-2xl md:text-3xl font-medium tracking-tight group-hover:text-white transition-colors">¿Por qué elegirnos?</h3>
+               <i data-lucide="award" class="w-6 h-6 text-white/30 group-hover:text-white transition-colors"></i>
+            </div>
+            <div class="text-sm font-mono text-white/40 mb-3 uppercase tracking-wider">Experiencia y profesionalismo</div>
+            <p class="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors">
+              Equipo con años de experiencia en series de TV, cine y documentales. Entregas puntuales, atención personalizada y confidencialidad.
+            </p>
+          </div>
+
         </div>
       </section>
     </div>
-    <footer class="border-t border-white/10">
-      <div class="container mx-auto px-5">
-        <div class="py-28 flex flex-col lg:flex-row items-center">
-          <h3 class="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">¡Contáctanos!</h3>
-          <div class="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2 gap-6">
-            <a href="mailto:produccion@ftcdubbing.com" class="flex items-center gap-2 font-bold hover:underline">
-              <i data-lucide="mail" class="w-5 h-5"></i>
-              produccion@ftcdubbing.com
-            </a>
-            <a href="https://wa.me/" class="flex items-center gap-2 font-bold hover:underline">
-              <i data-lucide="phone" class="w-5 h-5"></i>
-              55 1234 5678
-            </a>
-            <a href="https://instagram.com/ftcdubbing" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 font-bold hover:underline">
-              <i data-lucide="instagram" class="w-5 h-5"></i>
-              @ftcdubbing
-            </a>
+
+    <!-- contacto -->
+    <footer id="contacto" class="border-t border-white/10 bg-neutral-950">
+      <div class="container mx-auto px-6 py-24">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start reveal">
+          <div>
+            <div class="mb-12">
+               <img src="public/logos/LOGO_BCO_2.png" alt="FTC DUBBING" class="h-28 md:h-36 w-auto mb-10 opacity-90">
+               <h3 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-4">Hablemos de tu proyecto</h3>
+               <p class="text-white/50 max-w-md text-lg">
+                Déjanos tus datos y nos pondremos en contacto contigo a la brevedad para discutir cómo podemos colaborar.
+              </p>
+            </div>
+
+            <form action="#" class="space-y-6 max-w-lg">
+              <div class="group relative">
+                <input type="text" id="name" required class="peer w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-transparent focus:border-white focus:outline-none transition-colors duration-300">
+                <label for="name" class="absolute left-0 top-3 text-white/40 text-sm transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/40 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-white peer-valid:-top-3 peer-valid:text-xs peer-valid:text-white">Nombre Completo</label>
+              </div>
+              
+              <div class="group relative">
+                <input type="email" id="email" required class="peer w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-transparent focus:border-white focus:outline-none transition-colors duration-300">
+                <label for="email" class="absolute left-0 top-3 text-white/40 text-sm transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/40 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-white peer-valid:-top-3 peer-valid:text-xs peer-valid:text-white">Correo Electrónico</label>
+              </div>
+
+              <div class="group relative">
+                <textarea id="message" rows="4" required class="peer w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-transparent focus:border-white focus:outline-none transition-colors duration-300 resize-none"></textarea>
+                <label for="message" class="absolute left-0 top-3 text-white/40 text-sm transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/40 peer-placeholder-shown:top-3 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-white peer-valid:-top-3 peer-valid:text-xs peer-valid:text-white">Mensaje o Detalles del Proyecto</label>
+              </div>
+
+              <button type="submit" class="mt-4 px-8 py-3 bg-white text-black font-semibold tracking-wide hover:bg-neutral-200 transition-colors duration-300 flex items-center gap-2 group">
+                ENVIAR MENSAJE
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- info & socials -->
+          <div class="lg:pl-12 lg:border-l lg:border-white/10 h-full flex flex-col justify-between">
+            <div>
+              <h4 class="font-mono text-sm text-white/30 uppercase tracking-widest mb-12">Información</h4>
+              <ul class="space-y-12 mb-12">
+                <li>
+                  <a href="mailto:produccion@ftcdubbing.com" class="group flex items-start gap-6 hover:text-white transition-colors text-white/70">
+                    <span class="p-4 border border-white/10 group-hover:bg-white group-hover:text-black transition-all mt-1">
+                      <i data-lucide="mail" class="w-7 h-7"></i>
+                    </span>
+                    <div>
+                      <span class="block text-xs font-mono text-white/30 uppercase tracking-wide mb-2">Email</span>
+                      <span class="text-2xl font-light">produccion@ftcdubbing.com</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/" class="group flex items-start gap-6 hover:text-white transition-colors text-white/70">
+                    <span class="p-4 border border-white/10 group-hover:bg-white group-hover:text-black transition-all mt-1">
+                      <i data-lucide="phone" class="w-7 h-7"></i>
+                    </span>
+                    <div>
+                      <span class="block text-xs font-mono text-white/30 uppercase tracking-wide mb-2">Teléfono / WhatsApp</span>
+                      <span class="text-2xl font-light">55 1234 5678</span>
+                    </div>
+                  </a>
+                </li>
+                 <li>
+                  <a href="https://instagram.com/ftcdubbing" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-6 hover:text-white transition-colors text-white/70">
+                    <span class="p-4 border border-white/10 group-hover:bg-white group-hover:text-black transition-all mt-1">
+                      <i data-lucide="instagram" class="w-7 h-7"></i>
+                    </span>
+                    <div>
+                      <span class="block text-xs font-mono text-white/30 uppercase tracking-wide mb-2">Instagram</span>
+                      <span class="text-2xl font-light">@ftcdubbing</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+             <div class="bg-white/5 p-6 border border-white/5">
+                <p class="text-white/60 italic font-light">"Musique Non Stop. Sound First. Driven By Music"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/5 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/30 font-mono uppercase tracking-wider">
+          <p>&copy; 2026 FTC Dubbing. Todos los derechos reservados.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white transition-colors">Privacidad</a>
+            <a href="#" class="hover:text-white transition-colors">Términos</a>
           </div>
         </div>
       </div>
     </footer>
   </main>
-  <script>lucide.createIcons();</script>
+  
+  <script>
+    lucide.createIcons();
+
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('bg-black/80', 'backdrop-blur-md');
+        header.classList.remove('bg-transparent');
+      }
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
 </body>
 </html>
